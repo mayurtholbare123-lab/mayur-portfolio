@@ -1,0 +1,795 @@
+*{
+margin:0;
+padding:0;
+font-family:Segoe UI;
+box-sizing:border-box;
+}
+
+/* ✅ Smooth Background Transition */
+body{
+background:#f5f7fb;
+transition:0.4s;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:18px 60px;
+background:#0f172a;
+color:white;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.navbar a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:500;
+padding:8px 18px;
+border-radius:25px;
+transition:0.3s;
+}
+
+/* Hero */
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1600891964092-4316c288032e");
+background-size:cover;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+/* Glass Card */
+.glass-card{
+width:380px;
+padding:40px;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+color:white;
+text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,.4);
+}
+
+/* Input */
+.glass-card input{
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:12px;
+border:none;
+}
+
+/* Button */
+.order-btn{
+display:inline-block;
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:white;
+border:none;
+cursor:pointer;
+transition:0.4s ease;
+}
+
+.order-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px rgba(255,87,34,.6);
+}
+
+/* Menu Grid */
+.menu-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+padding:40px;
+}
+
+/* Food Card */
+.menu-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+transition:0.4s ease;
+position:relative;
+}
+
+.menu-card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+.menu-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.5s ease;
+}
+
+.menu-card:hover img{
+transform:scale(1.08);
+}
+
+.menu-card h2{
+padding:15px;
+transition:0.3s;
+}
+
+.menu-card:hover h2{
+color:#ff5722;
+}
+
+.menu-card p{
+padding-left:15px;
+color:#ff5722;
+font-weight:bold;
+}
+
+.menu-card form{
+padding:15px;
+}
+
+.menu-card input{
+width:80px;
+padding:8px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width:768px){
+
+.navbar{
+padding:15px 20px;
+justify-content:center;
+gap:10px;
+text-align:center;
+}
+
+.navbar h2{
+width:100%;
+margin-bottom:10px;
+}
+
+.navbar a{
+margin:5px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.glass-card{
+width:90%;
+padding:25px;
+}
+
+.menu-container{
+padding:20px;
+gap:20px;
+}
+
+.menu-card img{
+height:180px;
+}
+
+}
+
+/* 🌙 Dark Premium Theme */
+
+body.dark-mode{
+background:#0f172a;
+color:white;
+}
+
+.dark-mode .navbar{
+background:#020617;
+}
+
+.dark-mode .menu-card{
+background:#1e293b;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.dark-mode input{
+background:#020617;
+color:white;
+border:1px solid #334155;
+}
+
+.dark-mode .glass-card{
+background:rgba(0,0,0,0.4);
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle{
+position:fixed;
+right:20px;
+bottom:20px;
+padding:12px 18px;
+border-radius:30px;
+background:#ff9800;
+color:white;
+cursor:pointer;
+z-index:999;
+}
+
+/* Smooth Page Animation */
+
+body{
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== Premium Food Info Design ===== */
+
+.food-title{
+font-size:22px;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.food-desc{
+color:#94a3b8;
+font-size:14px;
+margin-bottom:12px;
+line-height:1.4;
+}
+
+.price-tag{
+font-size:20px;
+color:#ff5722;
+font-weight:bold;
+margin:12px 0;
+}
+
+/* Quantity Box Premium Style */
+.qty-box{
+width:110px;
+padding:10px;
+border-radius:14px;
+border:1px solid #e2e8f0;
+margin-top:10px;
+font-size:15px;
+outline:none;
+transition:0.3s;
+}
+
+.qty-box:focus{
+border-color:#ff5722;
+box-shadow:0 0 8px rgba(255,87,34,.3);
+}
+
+/* Buy Button Premium */
+.buy-btn{
+padding:16px 50px;
+font-size:18px;
+border-radius:35px;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+box-shadow:0 10px 25px rgba(255,87,34,.3);
+}
+
+/* Search Box Premium */
+.search-box{
+padding:13px;
+width:260px;
+border-radius:30px;
+border:1px solid #ddd;
+outline:none;
+transition:0.3s;
+}
+
+.search-box:focus{
+border-color:#ff5722;
+box-shadow:0 0 10px rgba(255,87,34,.2);
+}
+
+/* ============================= */
+/* 🛒 Swiggy Style Add To Cart  */
+/* ============================= */
+
+.cart-box{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+margin-top:15px;
+}
+
+/* Default Add Button */
+.cart-box .plus-btn,
+.cart-box .minus-btn{
+width:34px;
+height:34px;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s ease;
+}
+
+/* Plus Button */
+.cart-box .plus-btn{
+background:#22c55e;
+color:white;
+box-shadow:0 5px 15px rgba(34,197,94,.3);
+}
+
+.cart-box .plus-btn:hover{
+background:#16a34a;
+transform:scale(1.08);
+}
+
+/* Minus Button */
+.cart-box .minus-btn{
+background:#ef4444;
+color:white;
+box-shadow:0 5px 15px rgba(239,68,68,.3);
+}
+
+.cart-box .minus-btn:hover{
+background:#dc2626;
+transform:scale(1.08);
+}
+
+/* Quantity Number */
+.qty-input{
+width:38px;
+text-align:center;
+border:none;
+font-size:16px;
+font-weight:600;
+background:#f1f5f9;
+border-radius:8px;
+padding:6px;
+color:#0f172a;
+}
+
+/* Dark Mode Support */
+.dark-mode .qty-input{
+background:#020617;
+color:white;
+border:1px solid #334155;
+}
+
+/* ============================= */
+/* 🟢 ADD Button Style */
+/* ============================= */
+
+.add-btn{
+padding:8px 26px;
+border-radius:10px;
+border:2px solid #22c55e;
+background:white;
+color:#22c55e;
+font-weight:600;
+cursor:pointer;
+transition:0.3s ease;
+}
+
+.add-btn:hover{
+background:#22c55e;
+color:white;
+box-shadow:0 6px 15px rgba(34,197,94,.3);
+transform:scale(1.05);
+}
+
+/* ============================= */
+/* 🛒 Cart Wrapper */
+/* ============================= */
+
+.cart-wrapper{
+margin-top:15px;
+text-align:center;
+}
+
+/* ============================= */
+/* 🛒 Floating Cart Button */
+/* ============================= */
+
+.floating-cart{
+position:fixed;
+right:20px;
+bottom:100px;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(255,87,34,.4);
+z-index:999;
+transition:0.3s ease;
+}
+
+.floating-cart:hover{
+transform:scale(1.1);
+}
+
+.floating-cart span{
+margin-left:5px;
+font-weight:bold;
+}
+
+/* ============================= */
+/* 🔥 Sticky Bottom Order Bar */
+/* ============================= */
+
+.sticky-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 -5px 20px rgba(0,0,0,.15);
+z-index:998;
+}
+
+.sticky-bar span{
+font-size:18px;
+font-weight:600;
+color:#ff5722;
+}
+
+/* Dark Mode Support */
+.dark-mode .sticky-bar{
+background:#1e293b;
+}
+
+.dark-mode .add-btn{
+background:#020617;
+color:#22c55e;
+border:2px solid #22c55e;
+}
+
+.dark-mode .floating-cart{
+box-shadow:0 10px 25px rgba(0,0,0,.6);
+}
+/* ================================= */
+/* FIX: Cart Box Default Hidden */
+/* ================================= */
+
+.cart-box{
+display:none; /* default hidden */
+}
+
+/* Jab active ho */
+.cart-wrapper.active .cart-box{
+display:flex;
+}
+
+/* ================================= */
+/* FIX: Button Alignment Stable */
+/* ================================= */
+
+.cart-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* ADD button same size as cart box */
+.add-btn{
+min-width:110px;
+height:38px;
+}
+
+/* ================================= */
+/* FIX: Prevent Layout Jump */
+/* ================================= */
+
+.menu-card{
+min-height:420px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+/* ================================= */
+/* FIX: Sticky Bar Mobile Spacing */
+/* ================================= */
+
+body{
+padding-bottom:80px; /* sticky bar ke liye space */
+}
+
+/* ================================= */
+/* FIX: Floating Cart Animation */
+/* ================================= */
+
+.floating-cart{
+animation:bounceCart 2s infinite;
+}
+
+@keyframes bounceCart{
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+}
+
+/* ================================= */
+/* Dark Mode Improve */
+/* ================================= */
+
+.dark-mode .menu-card{
+border:1px solid #334155;
+}
+
+.dark-mode .sticky-bar span{
+color:#ff9800;
+}
+
+/* ⭐ Modern Swiggy Style Card */
+
+.menu-card{
+border-radius:22px;
+overflow:hidden;
+background:white;
+transition:0.3s ease;
+position:relative;
+}
+
+.menu-card img{
+height:190px;
+width:100%;
+object-fit:cover;
+}
+
+.menu-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Food Badge */
+
+.food-badge{
+position:absolute;
+top:12px;
+left:12px;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+}
+
+/* Price Tag */
+
+.price-tag{
+font-size:20px;
+font-weight:bold;
+color:#ff5722;
+margin:10px 0;
+}
+
+/* Sticky Bottom Cart */
+
+.sticky-bar{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+padding:15px 30px;
+box-shadow:0 -5px 20px rgba(0,0,0,.15);
+z-index:999;
+}
+.menu-card{
+animation:cardFade 0.6s ease;
+}
+
+@keyframes cardFade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+/* Overlay Blur Background */
+.success-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+/* Success Card */
+.success-box{
+background:white;
+padding:28px;
+border-radius:24px;
+text-align:center;
+width:260px;
+box-shadow:0 0 60px rgba(0,0,0,.25);
+
+/* 3D Pop Entry */
+animation:successPop 0.55s cubic-bezier(.34,1.56,.64,1);
+}
+
+/* 3D Spring Pop */
+@keyframes successPop{
+0%{
+transform:scale(0.3) rotate(-10deg);
+opacity:0;
+}
+
+70%{
+transform:scale(1.15) rotate(3deg);
+opacity:1;
+}
+
+100%{
+transform:scale(1) rotate(0);
+}
+}
+
+/* Green Circle Container */
+.phonepe-success{
+width:72px;
+height:72px;
+margin:0 auto 18px;
+position:relative;
+}
+
+/* Glow Pulse Ring */
+.glow-ring{
+position:absolute;
+inset:0;
+border-radius:50%;
+background:#16a34a;
+opacity:0.25;
+animation:glowPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse{
+0%{
+transform:scale(0.7);
+opacity:0.3;
+}
+
+50%{
+transform:scale(1.35);
+opacity:0;
+}
+
+100%{
+transform:scale(0.7);
+opacity:0.3;
+}
+}
+
+/* SVG Tick Animation */
+.phonepe-svg{
+width:72px;
+height:72px;
+animation:tickBounce 0.7s cubic-bezier(.34,1.56,.64,1);
+}
+
+@keyframes tickBounce{
+0%{
+transform:scale(0.2) rotate(-20deg);
+opacity:0;
+}
+
+60%{
+transform:scale(1.25) rotate(5deg);
+}
+
+80%{
+transform:scale(0.95);
+}
+
+100%{
+transform:scale(1);
+}
+}
+
+/* Tick Line Draw Smooth */
+.tick-mark{
+fill:none;
+stroke:white;
+stroke-width:4;
+stroke-linecap:round;
+stroke-linejoin:round;
+stroke-dasharray:140;
+stroke-dashoffset:140;
+animation:drawTick 0.7s ease forwards;
+}
+
+@keyframes drawTick{
+to{
+stroke-dashoffset:0;
+}
+}
+
+/* Mobile Optimization */
+@media(max-width:768px){
+
+.success-box{
+width:210px;
+padding:22px;
+}
+
+.phonepe-success{
+width:58px;
+height:58px;
+}
+
+.phonepe-svg{
+width:58px;
+height:58px;
+}
+
+}
+
+
+<script>
+
+/* ================================
+🔥 Mobile Haptic Vibration Sync
+================================ */
+
+function playHapticPattern(){
+
+// Check vibration support
+if("vibrate" in navigator){
+
+// Fintech Style Pattern
+navigator.vibrate([
+120, 40, 80, 30, 60
+]);
+
+}
+
+}
+
+/* Call vibration when page loads (success page) */
+window.addEventListener("load", function(){
+
+setTimeout(function(){
+playHapticPattern();
+},300); // sync with animation
+
+});
+
+</script>
